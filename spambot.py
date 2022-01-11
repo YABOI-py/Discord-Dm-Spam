@@ -24,7 +24,7 @@ with open("tokens.txt", "r") as r:
             while True:
                 time.sleep(delay)
                 headers = {"authorization": token, "user-agent": ua.random}
-                r = requests.put("https://discord.com/api/v9/channels/%7B%7D/recipients/%7B%7D%22.format(iden, userID), headers=headers)
+                r = requests.put('https://discord.com/api/v9/channels/%7B%7D/recipients/%7B%7D%22.format(iden, userID), headers=headers')
                 if r.status_code == 201:
                     print(r.status_code)
                     i += 1
